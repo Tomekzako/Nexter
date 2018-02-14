@@ -9,7 +9,7 @@
     grid-template-rows: 1fr min-content 6rem 1fr;
     grid-template-columns: max-content;
     grid-row-gap: 1.5rem;
-    padding: 7rem;
+    padding: 8rem;
     padding-top: 4rem;
     justify-content: center;
     
@@ -17,10 +17,31 @@
         height: 3rem;
         justify-self: center;
     }
-    &__seenon-text {}
+    &__seenon-text {
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+        
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+        align-items: center;
+        
+        &::after,
+        &::before {
+            content: "";
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
+    }
     &__seenon-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items: center;
         img {
             height: 2.5rem;
+            filter: brightness(70%);
         }
     }
     
